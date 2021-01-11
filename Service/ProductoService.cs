@@ -8,44 +8,44 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    public class StudentService
+    public class ProductoService
     {
-        public List<Student> Get()
+        public List<Producto> Get()
         {
-            List<Student> students = null;
+            List<Producto> students = null;
             using (var context = new SchoolContext())
             {
-                students = context.Students.ToList();
+                //students = context.Students.ToList();
             }
             return students;
         }
 
-        public Student GetById(int ID)
+        public Producto GetById(int ID)
         {
-            Student student = null;
+            Producto student = null;
             using (var context = new SchoolContext())
             {
-                student = context.Students.Find(ID);
+                //student = context.Students.Find(ID);
             }
             return student;
         }
 
-        public void Insert(Student student)
+        public void Insert(Producto student)
         {
             using (var context = new SchoolContext())
             {
-                context.Students.Add(student);
+                //context.Students.Add(student);
                 context.SaveChanges();
             }
         }
 
-        public void Update(Student student, int ID)
+        public void Update(Producto student, int ID)
         {
             using (var context = new SchoolContext())
             {
-                var studentNew = context.Students.Find(ID);
-                studentNew.studentName = student.studentName;
-                studentNew.studentAddress = student.studentAddress;
+                //var studentNew = context.Students.Find(ID);
+                //studentNew.studentName = student.studentName;
+                //studentNew.studentAddress = student.studentAddress;
                 //studentNew.studentLastName = student.studentLastName;
                 //studentNew.studentCode = student.studentCode;
                 //studentNew.startDate = student.startDate;
@@ -58,12 +58,11 @@ namespace Service
         {
             using (var context = new SchoolContext())
             {
-                var student = context.Students.Find(ID);
-                context.Students.Remove(student);
-                context.SaveChanges();
+               // var student = context.Students.Find(ID);
+                //context.Students.Remove(student);
+                //context.SaveChanges();
             }
         }
 
     }
-
 }
