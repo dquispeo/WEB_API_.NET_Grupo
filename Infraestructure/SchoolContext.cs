@@ -14,6 +14,7 @@ namespace Infraestructure
         {
 
         }
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<Producto> Productos { get; set; }
     }
 }
