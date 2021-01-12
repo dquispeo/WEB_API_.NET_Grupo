@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Domain",
+    "\\Infraestructure",
+    "\\Service"
   ],
   "PreviewInSolutionExplorer": false
 }
