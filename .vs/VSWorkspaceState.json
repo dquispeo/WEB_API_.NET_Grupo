@@ -3,7 +3,10 @@
     "",
     "\\Domain",
     "\\Infraestructure",
+    "\\MVCAJAX",
+    "\\MVCAJAX\\Models",
     "\\Service"
   ],
+  "SelectedNode": "\\MVCAJAX\\Models",
   "PreviewInSolutionExplorer": false
 }
