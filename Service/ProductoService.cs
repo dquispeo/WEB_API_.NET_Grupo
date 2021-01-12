@@ -15,7 +15,7 @@ namespace Service
             List<Producto> students = null;
             using (var context = new SchoolContext())
             {
-                //students = context.Students.ToList();
+                productos = context.Productos.ToList();
             }
             return students;
         }
@@ -25,7 +25,7 @@ namespace Service
             Producto student = null;
             using (var context = new SchoolContext())
             {
-                //student = context.Students.Find(ID);
+                productos = context.Productos.Find(ID);
             }
             return student;
         }
@@ -34,7 +34,7 @@ namespace Service
         {
             using (var context = new SchoolContext())
             {
-                //context.Students.Add(student);
+                context.Productos.Add(producto);
                 context.SaveChanges();
             }
         }
@@ -43,13 +43,12 @@ namespace Service
         {
             using (var context = new SchoolContext())
             {
-                //var studentNew = context.Students.Find(ID);
-                //studentNew.studentName = student.studentName;
-                //studentNew.studentAddress = student.studentAddress;
-                //studentNew.studentLastName = student.studentLastName;
-                //studentNew.studentCode = student.studentCode;
-                //studentNew.startDate = student.startDate;
-                //student.EnrollmentDate = student.EnrollmentDate;
+                var productoNew = context.Productos.Find(ID);
+                productoNew.codigo = producto.codigo;
+                productoNew.precio = producto.precio;
+                productoNew.stok = producto.stok;
+                productoNew.enable = producto.enable;    
+    
                 context.SaveChanges();
             }
         }
@@ -58,9 +57,9 @@ namespace Service
         {
             using (var context = new SchoolContext())
             {
-               // var student = context.Students.Find(ID);
-                //context.Students.Remove(student);
-                //context.SaveChanges();
+                var producto = context.Productos.Find(ID);
+                context.Productos.Remove(producto);
+                context.SaveChanges();
             }
         }
 
